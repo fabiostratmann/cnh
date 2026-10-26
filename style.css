@@ -1,0 +1,134 @@
+/* Premium styling for CNH Generator */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary-bg: #010133;
+  --primary-color: #fff;
+  --accent: #ffbf00;
+  --shadow: rgba(0,0,0,0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  background: var(--primary-bg);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  gap: 20px;
+}
+
+.site-header .logo {
+  position: absolute;
+  left: 20px;
+  height: 60px;
+  width: auto;
+}
+
+.site-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px;
+  justify-content: center;
+}
+
+.form-section, .preview-section {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow);
+  padding: 20px;
+  flex: 1 1 350px;
+  max-width: 500px;
+}
+
+.form-section h2, .preview-section h2 {
+  margin-bottom: 15px;
+  color: #010133;
+  font-weight: 600;
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #222;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="file"] {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 4px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #fff;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--primary-bg);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #020260;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background: #777;
+  cursor: not-allowed;
+}
+
+canvas {
+  max-width: 100%;
+  border: 2px solid #010133;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
